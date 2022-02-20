@@ -16,7 +16,7 @@ var options = {
 };
 
 // the demo can auto join channel with params in url
-$(() => {
+/*$*/(() => {
     var urlParams = new URL(location.href).searchParams;
     options.appid = urlParams.get("appid");
     options.channel = urlParams.get("channel");
@@ -31,23 +31,23 @@ $(() => {
     }
 })
 
-$("#host-join").click(function (e) {
+/*$*/("#host-join").click(function (e) {
     options.role = "host"
 })
 
-$("#lowLatency").click(function (e) {
+/*$*/("#lowLatency").click(function (e) {
     options.role = "audience"
     options.audienceLatency = 1
     $("#join-form").submit()
 })
 
-$("#ultraLowLatency").click(function (e) {
+/*$*/("#ultraLowLatency").click(function (e) {
     options.role = "audience"
     options.audienceLatency = 2
     $("#join-form").submit()
 })
 
-$("#join-form").submit(async function (e) {
+/*$*/("#join-form").submit(async function (e) {
     e.preventDefault();
     $("#host-join").attr("disabled", true);
     $("#audience-join").attr("disabled", true);
@@ -73,7 +73,7 @@ $("#join-form").submit(async function (e) {
     }
 })
 
-$("#leave").click(function (e) {
+/*$*/("#leave").click(function (e) {
     leave();
 })
 
